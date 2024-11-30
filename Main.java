@@ -5,5 +5,8 @@ public class Main {
         stock.updatePrice(160.0);
         System.out.println(stock.calculateProfit());
         System.out.println(stock.getCurrentValue());
+        stock.updatePrice(140.0);
+        System.out.println(stock.calculateProfit());
+        System.out.println(stock.getCurrentValue());
     }
 }
