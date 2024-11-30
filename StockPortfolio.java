@@ -7,7 +7,10 @@ class StockPortfolio {
 
     // TODO: Initialize stock details
     public StockPortfolio(String symbol, int quantity, double buyingPrice) {
-        // TODO
+        this.currentPrice = buyingPrice;
+        this.buyingPrice = buyingPrice;
+        this.symbol = symbol;
+        this.quantity = quantity;
     }
 
     // TODO: Update current market price
