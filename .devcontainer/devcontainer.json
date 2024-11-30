@@ -1,11 +1,15 @@
 {
-  "name": "Java Development Container",
-  "image": "mcr.microsoft.com/vscode/devcontainers/java:11", // Use Java 11 image
-  "remoteUser": "vscode",
+  "name": "Java Development Environment",
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:11",
   "settings": {
-    "java.home": "/usr/lib/jvm/java-11-openjdk"
+    "java.home": "/usr/lib/jvm/java-11-openjdk-amd64"
   },
   "extensions": [
-    "redhat.java" // Basic Java extension for VS Code
-  ]
+    "vscjava.vscode-java-pack",
+    "redhat.java",
+    "eamodio.gitlens"
+  ],
+  "forwardPorts": [8080],
+  "remoteUser": "vscode",
+  "postCreateCommand": "mvn clean install"
 }
